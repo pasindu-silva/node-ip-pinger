@@ -36,6 +36,10 @@ app.get("/", (req, res) => {
   );
 });
 
+app.get("/health", (req, res) => {
+  res.send("Healthy");
+});
+
 // Start the server
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
